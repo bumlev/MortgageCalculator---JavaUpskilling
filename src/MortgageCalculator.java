@@ -17,15 +17,10 @@ public class MortgageCalculator {
         this.totalNumberOfPayments = totalNumberOfPayments;
     }
 
-    public double getAmountOfLoan() {
-        return amountOfLoan;
-    }
 
-    public double getMonthlyInterestRate() {
-        return monthlyInterestRate;
-    }
-
-    public int getTotalNumberOfPayments() {
-        return totalNumberOfPayments;
+    public double getMonthlyPayment() {
+        return  this.amountOfLoan * this.monthlyInterestRate *
+                Math.pow(1 + this.monthlyInterestRate , this.totalNumberOfPayments) /
+                (Math.pow(1 + this.monthlyInterestRate , this.totalNumberOfPayments) - 1);
     }
 }
