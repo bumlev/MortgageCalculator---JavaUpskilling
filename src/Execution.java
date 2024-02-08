@@ -24,10 +24,7 @@ public class Execution {
         int numberOfPayments = years * 12;
         mortgageCalculator.setTotalNumberOfPayments(numberOfPayments);
 
-        double monthlyPayment  = mortgageCalculator.getAmountOfLoan() * mortgageCalculator.getMonthlyInterestRate() *
-                Math.pow(1 + mortgageCalculator.getMonthlyInterestRate() , numberOfPayments) /
-                (Math.pow(1 + mortgageCalculator.getMonthlyInterestRate() ,
-                        mortgageCalculator.getTotalNumberOfPayments()) - 1);
+        double monthlyPayment  = mortgageCalculator.getMonthlyPayment();
 
         System.out.println("The monthly payment is " + monthlyPayment);
     }
