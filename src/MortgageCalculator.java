@@ -41,6 +41,7 @@ public class MortgageCalculator {
     }
 
     public void enterTotalNumberOfPayment() {
+
         System.out.println("Please enter the loan duration in years: ");
         int years = Input.inputForInteger(scanner);
         int numberOfPayments = years * 12;
@@ -49,6 +50,7 @@ public class MortgageCalculator {
 
 
     public double getMonthlyPayment() {
+
         return  this.amountOfLoan * this.monthlyInterestRate *
                 Math.pow(1 + this.monthlyInterestRate , this.totalNumberOfPayments) /
                 (Math.pow(1 + this.monthlyInterestRate , this.totalNumberOfPayments) - 1);
