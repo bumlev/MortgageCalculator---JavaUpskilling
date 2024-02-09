@@ -3,25 +3,35 @@ import java.util.Scanner;
 
 public class Input {
 
-    public static Double inputForDouble(Scanner scanner) {
+    private double doubleValue;
+    private int intValue;
+
+
+    public void inputForDouble(Scanner scanner) {
 
         try {
-            return scanner.nextDouble();
+            this.doubleValue = scanner.nextDouble();
         }catch (InputMismatchException exception) {
             System.out.println("The value is not a double");
             System.exit(0);
         }
-        return 0.0;
     }
 
-    public static Integer inputForInteger(Scanner scanner) {
+    public  void inputForInteger(Scanner scanner) {
 
         try {
-            return scanner.nextInt();
+            this.intValue =  scanner.nextInt();
         }catch (InputMismatchException exception) {
-            System.out.println("The value is not a double");
+            System.out.println("The value is not an Integer!");
             System.exit(0);
         }
-        return 0;
+    }
+
+    public double getDoubleValue() {
+        return this.doubleValue;
+    }
+
+    public int getIntValue() {
+        return this.intValue;
     }
 }
