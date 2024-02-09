@@ -2,6 +2,10 @@ import java.util.Scanner;
 
 public class Execution {
 
+    /**
+     * Execution of a main function
+     * @param args , a parameter of main function
+     */
     public static void main(String[] args) {
 
         MortgageCalculator mortgageCalculator = new MortgageCalculator();
