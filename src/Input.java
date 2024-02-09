@@ -1,10 +1,9 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class InputException {
+public class Input {
 
-
-    public static Double inputExceptionForDouble(Scanner scanner) {
+    public static Double inputForDouble(Scanner scanner) {
 
         try {
             return scanner.nextDouble();
@@ -15,7 +14,7 @@ public class InputException {
         return 0.0;
     }
 
-    public static Integer inputExceptionForInteger(Scanner scanner) {
+    public static Integer inputForInteger(Scanner scanner) {
 
         try {
             return scanner.nextInt();
